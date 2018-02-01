@@ -15,6 +15,7 @@
 		450FAE152022B19900E71825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 450FAE142022B19900E71825 /* main.m */; };
 		450FAE1F2022B19900E71825 /* FBYURLSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450FAE1E2022B19900E71825 /* FBYURLSDKDemoTests.m */; };
 		450FAE2A2022B19900E71825 /* FBYURLSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450FAE292022B19900E71825 /* FBYURLSDKDemoUITests.m */; };
+		450FAE402022BCD000E71825 /* libFBYSDKDemo_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 450FAE3F2022BCD000E71825 /* libFBYSDKDemo_all.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		450FAE252022B19900E71825 /* FBYURLSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBYURLSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450FAE292022B19900E71825 /* FBYURLSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBYURLSDKDemoUITests.m; sourceTree = "<group>"; };
 		450FAE2B2022B19900E71825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450FAE3E2022BCD000E71825 /* FBYSDKDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBYSDKDemo.h; sourceTree = "<group>"; };
+		450FAE3F2022BCD000E71825 /* libFBYSDKDemo_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFBYSDKDemo_all.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450FAE402022BCD000E71825 /* libFBYSDKDemo_all.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +105,7 @@
 		450FAE042022B19900E71825 /* FBYURLSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				450FAE372022B68C00E71825 /* FBYSDK */,
 				450FAE052022B19900E71825 /* AppDelegate.h */,
 				450FAE062022B19900E71825 /* AppDelegate.m */,
 				450FAE082022B19900E71825 /* ViewController.h */,
@@ -130,6 +135,15 @@
 				450FAE2B2022B19900E71825 /* Info.plist */,
 			);
 			path = FBYURLSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+		450FAE372022B68C00E71825 /* FBYSDK */ = {
+			isa = PBXGroup;
+			children = (
+				450FAE3E2022BCD000E71825 /* FBYSDKDemo.h */,
+				450FAE3F2022BCD000E71825 /* libFBYSDKDemo_all.a */,
+			);
+			path = FBYSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +448,10 @@
 				DEVELOPMENT_TEAM = 8ZQEMVF63J;
 				INFOPLIST_FILE = FBYURLSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBYURLSDKDemo/FBYSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FBYURLSDKDemo.a.FBYURLSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,6 +466,10 @@
 				DEVELOPMENT_TEAM = 8ZQEMVF63J;
 				INFOPLIST_FILE = FBYURLSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBYURLSDKDemo/FBYSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FBYURLSDKDemo.a.FBYURLSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
